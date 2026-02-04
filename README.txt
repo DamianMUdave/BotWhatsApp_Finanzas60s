@@ -44,3 +44,18 @@ Uso rápido:
 Cambiar de proveedor:
 - Ajusta BOT_PROVIDER=meta cuando quieras usar la API oficial.
 - La lógica del bot se mantiene en BotService.php.
+
+Ejecución local (para pruebas):
+1) Levanta un servidor PHP local desde la raíz del repo:
+   php -S 0.0.0.0:8080 -t .
+2) Si necesitas recibir webhooks de Twilio en local, usa un túnel como ngrok:
+   ngrok http 8080
+   Luego apunta el webhook de Twilio a:
+   https://<tu-subdominio>.ngrok.io/bot/webhook.php
+
+Twilio (Sandbox de WhatsApp):
+- En la consola de Twilio, configura el campo "When a message comes in" con:
+  https://tudominio.com/bot/webhook.php (o la URL pública de ngrok si estás en local).
+- Para enviar mensajes de prueba desde tu propio endpoint:
+  POST https://tudominio.com/bot/send.php con body:
+  to=whatsapp:+XXXXXXXXXXX&message=Hola
