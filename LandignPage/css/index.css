@@ -1,0 +1,91 @@
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+
+.hero {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.cta {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.whatsapp{
+  background: #22c55e;
+}
+
+.tiktok{
+  background: #ff0050;
+}
+
+.email{
+  background: #2563eb;
+}
+
+.whatsapp:hover {
+  background: #16a34a;
+}
+
+.tiktok:hover {
+  background: #e60043;
+}
+
+.email:hover {
+  background: #1e40af;
+}
+
+.micro {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.example blockquote {
+  background: #fff;
+  padding: 20px;
+  border-left: 4px solid #22c55e;
+}
+
+.final-cta {
+  text-align: center;
+  padding-bottom: 60px;
+}
