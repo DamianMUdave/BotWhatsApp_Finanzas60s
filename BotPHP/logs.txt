@@ -1,0 +1,35 @@
+2026-02-04 16:00:27
+METHOD: GET
+POST:
+Array
+(
+)
+
+GET:
+Array
+(
+)
+
+
+2026-02-04 23:01:37
+Array
+(
+    [SmsMessageSid] => SM37acb4d53b34e43fc5dd7976624e3c75
+    [NumMedia] => 0
+    [ProfileName] => Udave Damián
+    [MessageType] => text
+    [SmsSid] => SM37acb4d53b34e43fc5dd7976624e3c75
+    [WaId] => 5218719330351
+    [SmsStatus] => received
+    [Body] => hola
+    [To] => whatsapp:+14155238886
+    [NumSegments] => 1
+    [ReferralNumMedia] => 0
+    [MessageSid] => SM37acb4d53b34e43fc5dd7976624e3c75
+    [AccountSid] => AC5130883676e22c64058fe26d1861ca3b
+    [ChannelMetadata] => {"type":"whatsapp","data":{"context":{"ProfileName":"Udave Damián","WaId":"5218719330351"}}}
+    [From] => whatsapp:+5218719330351
+    [ApiVersion] => 2010-04-01
+)
+
+

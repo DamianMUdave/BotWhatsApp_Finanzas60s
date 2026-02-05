@@ -1,0 +1,12 @@
+# No mostrar listado de archivos
+Options -Indexes
+
+# Solo permitir acceso al webhook
+<Files "webhook.php">
+    Require all granted
+</Files>
+
+# Bloquear cualquier otro PHP
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
