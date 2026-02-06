@@ -4,9 +4,9 @@ Debido a que ya contamos con este servicio de host.
 Las credenciales de ipage estan en el servidor de la empresa:
     Sistemas\Pagina Web Ipage
 
-========================
+===================================
 Capa de bot WhatsApp (PHP)
-========================
+===================================
 
 La carpeta "bot" contiene una capa intermedia para usar Twilio en pruebas y
 luego cambiar a la API oficial de WhatsApp (Meta) sin tocar la lógica del bot.

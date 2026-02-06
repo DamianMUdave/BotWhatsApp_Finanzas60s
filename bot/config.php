@@ -3,8 +3,8 @@
 return [
     'provider' => getenv('BOT_PROVIDER') ?: 'twilio',
     'twilio' => [
-        'account_sid' => getenv('TWILIO_ACCOUNT_SID') ?: 'AC5130883676e22c64058fe26d1861ca3b',
-        'auth_token' => getenv('TWILIO_AUTH_TOKEN') ?: '8430d934ec2f6e1884c0cc8205e6daf4',
+        'account_sid' => getenv('TWILIO_ACCOUNT_SID') ?: '',
+        'auth_token' => getenv('TWILIO_AUTH_TOKEN') ?: '',
         'from' => getenv('TWILIO_WHATSAPP_FROM') ?: '',
     ],
     'meta' => [
