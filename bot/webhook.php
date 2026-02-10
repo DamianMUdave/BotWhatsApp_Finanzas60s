@@ -6,14 +6,14 @@ $config = require __DIR__ . '/config.php';
 
 require_once __DIR__ . '/src/TwilioProvider.php';
 require_once __DIR__ . '/src/MetaWhatsAppProvider.php';
+require_once __DIR__ . '/src/Database.php';
+require_once __DIR__ . '/src/UserRepository.php';
 require_once __DIR__ . '/src/BotService.php';
 
 $providerName = $config['provider'] ?? 'twilio';
 $provider = $providerName === 'meta'
     ? new MetaWhatsAppProvider($config['meta'] ?? [])
     : new TwilioProvider($config['twilio'] ?? []);
-
-$bot = new BotService($provider);
 
 $payload = $_POST;
 if (empty($payload)) {
@@ -24,4 +24,14 @@ if (empty($payload)) {
     }
 }
 
-$bot->handleIncoming($payload);
+try {
+    $pdo = Database::connect($config['db'] ?? []);
+    $repository = new UserRepository($pdo);
+    $bot = new BotService($provider, $repository);
+    $bot->handleIncoming($payload);
+} catch (Throwable $exception) {
+    error_log('Webhook error: ' . $exception->getMessage());
+    http_response_code(500);
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode(['ok' => false, 'error' => 'Error interno']);
+}
