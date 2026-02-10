@@ -1,4 +1,6 @@
 <?php
+require __DIR__ . '/webhook_twilio.php';
+/*
 header("Content-Type: text/xml");
 
 // Leer datos que manda Twilio
@@ -23,3 +25,4 @@ if ($mensaje === 'hola') {
 }
 
 echo '</Response>';
+*/
