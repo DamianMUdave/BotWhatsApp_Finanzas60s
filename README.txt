@@ -14,8 +14,7 @@ luego cambiar a la API oficial de WhatsApp (Meta) sin tocar la lógica del bot.
 Archivos principales:
 - bot/webhook.php: endpoint para recibir mensajes entrantes.
 - bot/send.php: endpoint sencillo para enviar mensajes de prueba.
-- bot/src/BotService.php: lógica del bot (flujo principal).
-- bot/src/UserRepository.php: acceso a base de datos (usuarios, etiquetas, planes, suscripciones).
+- bot/src/BotService.php: lógica del bot (puedes editarla sin tocar proveedores).
 - bot/src/TwilioProvider.php: integración Twilio.
 - bot/src/MetaWhatsAppProvider.php: integración Meta WhatsApp.
 
