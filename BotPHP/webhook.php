@@ -1,5 +1,6 @@
 <?php
-require __DIR__ . '/webhook_twilio.php';
+//require __DIR__ . '/webhook_twilio.php';
+require __DIR__ . '/webhook_whatsapp.php';
 /*
 header("Content-Type: text/xml");
 

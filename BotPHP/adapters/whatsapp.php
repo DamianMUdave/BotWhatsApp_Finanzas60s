@@ -9,7 +9,7 @@ function responderCloud($to, $mensaje) {
         "text" => ["body" => $mensaje]
     ];
 
-    $ch = curl_init("https://graph.facebook.com/v19.0/$phoneId/messages");
+    $ch = curl_init("https://graph.facebook.com/v22.0/$phoneId/messages");
     curl_setopt_array($ch, [
         CURLOPT_HTTPHEADER => [
             "Authorization: Bearer $token",
