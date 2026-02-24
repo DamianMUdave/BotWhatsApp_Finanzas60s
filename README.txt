@@ -1,12 +1,40 @@
-Tanto el bot como la Landing Page estaran hosteados en ipage.
+Tanto el bot como la Landing Page estarán hosteados en ipage.
 Debido a que ya contamos con este servicio de host.
 
-Las credenciales de ipage estan en el servidor de la empresa:
+Las credenciales de ipage están en el servidor de la empresa:
     Sistemas\Pagina Web Ipage
 
-===================================
+======================================================================
+Pruebas locales
+======================================================================
+Se están realizando las pruebas utilizando ngrok para generar una url publica
+para la comunicación entre el intermediario asi como para la API de WhatsApp.
+
+https://dashboard.ngrok.com/
+
+Se debe de configurar con los tokens de autenticación de la cuenta correspondiente
+de ngrok, solamente se debe de crear una cuenta y vincularla con el token que se genera
+utilizando la url gratuita porque después cambiará la url de forma aleatoria, por lo que
+se debe de especificar en el comando para ejecutar ngrok de forma local:
+
+ngrok http 8080 --url https://leafless-maurice-flourishing.ngrok-free.dev
+
+En este caso se esta utilizando el puerto 8080 local debido a que este puerto estaba disponible
+para ejecutar aplicaciones de forma local para que de esta forma cuando la API o el intermediario 
+se comuniquen con el bot este estará escuchando en dicho puerto al llamar la url, la url
+es la url generada de forma gratuita en la página de ngrok.
+
+En cambio el bot se debe de ejecutar con php en el mismo puerto, el puerto 8080, estando ubicado
+dentro de la carpeta del bot correspondiente, ya sea "bot" o "BotPHP", con el siguiente comando:
+
+php -S 0.0.0.0:8080 -t .
+
+El 0.0.0.0 se refiere a que la aplicación, en este caso el bot, se ejecutara de forma local, y
+después de los 2 puntos es el puerto, por eso dice 8080.
+
+======================================================================
 Capa de bot WhatsApp (PHP)
-===================================
+======================================================================
 
 La carpeta "bot" contiene una capa intermedia para usar Twilio en pruebas y
 luego cambiar a la API oficial de WhatsApp (Meta) sin tocar la lógica del bot.
